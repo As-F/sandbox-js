@@ -1,13 +1,21 @@
-const func1 = (str) => {
-  return str;
+const myPro = {
+  name: "asa",
+  age: 28
 };
 
-console.log(func1("aaa"));
+const message = `my name is ${myPro.name}!`;
+console.log(message);
+// ↓取り出せる！「分割代入」
+const { name, age } = myPro;
+const message2 = `my name is ${name}!!`;
 
-const func2 = (str) => str;
-// 引数１つなら実はかっこ省略できる
-//処理が一行で済む単一式なら、｛｝とreturn併せて省略できる
+console.log(message2);
 
-console.log(func2("bb"));
+const mylist = ["aaa", "bbb"];
+const mes = `before is ${mylist[0]}`;
+console.log(mes);
 
-const fun3 = (n1, n2) => n1 + n2;
+// ↓配列も取り出せる！「分割代入」
+const [before, after] = mylist;
+const mes2 = `before is ${before}`;
+console.log(mes2);
