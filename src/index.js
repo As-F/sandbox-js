@@ -1,22 +1,18 @@
-// マップ関数について
+// ３項演算子　→ifとelseを一行で
+const formatnum = (num) => (typeof num === "number" ? "数字" : "じゃない");
+console.log(formatnum(1));
 
-const nameArr = ["A", "B", "C"];
-// ↓はreturnしてるので新たな配列を作ってる。アローのようで微妙に違うので注意
-const nameArr1 = nameArr.map((name) => {
-  return name;
-});
-console.log(nameArr1);
+/**
+ *
+ *
+ */
 
-// ↓はforと同じで、単純に繰り返し処理してる
-// 二つ目の引数には順番が入ってくるので、もしインデックスが欲しければ下記のように２つ目にindexとかなんか指定すればいい
-nameArr.map((name, index) => console.log(`${index}はname`));
+// ||はじつはorではなくて左がfalseとなるとき右側を返す。結果的にorの動きになるけど、下の例で数値をnullにしたり入れたりすると分かる
+const num = 100;
+const fee = num || "左がfalse";
+// console.log(fee);
 
-// こういうのもできる
-const nameArr3 = nameArr.map((name) => {
-  if (name === "B") {
-    return `${name}こいつｂ`;
-  } else {
-    return name;
-  }
-});
-console.log(nameArr3);
+// &&は左がtrueなら右を返す
+const num2 = 100;
+const fee2 = num && "数値入れた";
+console.log(fee2);
