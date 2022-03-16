@@ -1,10 +1,10 @@
-import "./styles.css";
+// var val1 = "aab";
+// console.log(val1);
+// var val1 = "aab";
+let var2 = "senngen";
+// let var1 = "senngen";
+console.log(var2);
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+var2 = "上書きOK";
+
+let var2 = "再宣言できない";
